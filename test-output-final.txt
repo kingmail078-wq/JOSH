@@ -1,0 +1,23 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.2, pluggy-1.6.0 -- /workspaces/JOSH/josh/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /workspaces/JOSH/josh
+configfile: pyproject.toml
+plugins: anyio-4.15.1, cov-6.3.0
+collecting ... collected 13 items
+
+tests/test_mvp.py::test_exact_absence_is_typed_and_does_not_reconstruct PASSED [  7%]
+tests/test_mvp.py::test_coordinator_uses_primary_and_at_most_two_consultants PASSED [ 15%]
+tests/test_mvp.py::test_consultants_are_ranked_by_request_relevance PASSED [ 23%]
+tests/test_mvp.py::test_blueprint_routing_includes_named_specialists_without_exceeding_bounded_consultants PASSED [ 30%]
+tests/test_mvp.py::test_seeded_pilot_artworks_follow_phase_zero_contract PASSED [ 38%]
+tests/test_mvp.py::test_unknown_primary_lab_requires_human_confirmation_before_any_change PASSED [ 46%]
+tests/test_mvp.py::test_request_parser_flags_continue_requests_for_human_approval PASSED [ 53%]
+tests/test_mvp.py::test_ledger_persists_approval_discovery_and_audit_trace PASSED [ 61%]
+tests/test_mvp.py::test_runtime_envelope_and_evaluation_record_bounded_workflow PASSED [ 69%]
+tests/test_mvp.py::test_shared_memory_keeps_provenance_and_relationship_graph_across_tasks PASSED [ 76%]
+tests/test_mvp.py::test_volume_one_learning_loop_completes_and_second_task_retrieves_first_learning PASSED [ 84%]
+tests/test_mvp.py::test_canonical_change_requires_approval_and_preserves_version PASSED [ 92%]
+tests/test_mvp.py::test_project_isolation_does_not_leak_metadata PASSED  [100%]
+
+============================== 13 passed in 2.32s ==============================

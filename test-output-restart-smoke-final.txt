@@ -1,0 +1,1 @@
+reader: restart_facts=1 unknown=True conflicts=[('A', 'C'), ('A', 'B')] permission=rejected auto_approval=rejected

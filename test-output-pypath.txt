@@ -1,0 +1,16 @@
+
+==================================== ERRORS ====================================
+______________________ ERROR collecting tests/test_mvp.py ______________________
+ImportError while importing test module '/workspaces/JOSH/josh/tests/test_mvp.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/python/3.14.2/lib/python3.14/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_mvp.py:5: in <module>
+    from sketch_lab.coordinator import Coordinator
+E   ModuleNotFoundError: No module named 'sketch_lab'
+=========================== short test summary info ============================
+ERROR tests/test_mvp.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+1 error in 0.28s

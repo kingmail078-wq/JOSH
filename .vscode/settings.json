@@ -1,0 +1,6 @@
+{
+    "chat.sessionSync.enabled": true,
+    "github.copilot.llm-gateway.serverUrl": "http://localhost:8000",
+    "vs-ngrok.domain": "",
+    "vs-ngrok.port": 8000
+}

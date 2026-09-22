@@ -74,4 +74,38 @@ No visual claim was promoted to retrieved fact because the artwork images were u
 
 ## Next safe action
 
-Supply the current artwork images for a real Finish Cycle assessment. That assessment must separate essential corrections from optional polish and must not mark the artwork finished without a separate explicit approval.
+Complete the bounded essential correction pass below, then supply one updated image for the final PASS/ADJUST decision. The artwork remains `active` and must not be marked finished without a separate explicit approval.
+
+## Visual Finish Cycle assessment
+
+Two current artwork photographs were inspected after version 5 was committed.
+
+### Finish decision
+
+**ADJUST — bounded correction pass required.**
+
+This is not authorization for broad reworking. The composition and concept are established. Only the following corrections are considered essential before the finish decision:
+
+1. **Restore lighthouse focal hierarchy.** Keep the lamp core as clean paper. Darken the lantern roof, balcony underside, and a small amount of sky immediately around the lantern so the beacon becomes the clearest light. Do not darken inside the protected lamp core.
+2. **Ground the tower on the rocks.** Add a controlled contact-dark at the lighthouse base and strengthen the overlap where the tower, platform, and foreground rock meet. Add only a light side-plane value to the tower; preserve most of its light body.
+3. **Complete the map-to-water transformation.** Break and soften selected portions of the long diagonal dividing edge. Let a few map/path marks dissolve into horizontal water movement so it reads as transformation rather than two scenes separated by a straight border.
+4. **Reduce competition from the large circular sky form.** Soften or partially veil its outline with atmosphere. It currently competes with the lantern while remaining visually unresolved.
+
+### Protected areas
+
+- Lighthouse placement, scale, and silhouette
+- Compass and map markings in the lower-left foreground
+- Main diagonal movement toward the lighthouse
+- Foreground and middle-distance rock placement
+- Distant horizon and foggy graphite atmosphere
+- Core MAP → REALITY → COASTLINE → LIGHTHOUSE concept
+
+### Optional polish — not required for completion
+
+- Minor cleanup of stray graphite outside important edges
+- Selective sharpening of one or two foreground rocks
+- Small presentation cleanup around the paper boundary
+
+### Stop condition
+
+Stop when the lantern reads first, the tower visibly contacts its rock platform, and the diagonal transition reads as map becoming coastline/water instead of a hard divider. Do not add detail across the entire drawing. Return one updated photograph for the final completion review.

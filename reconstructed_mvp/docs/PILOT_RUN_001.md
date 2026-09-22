@@ -2,7 +2,7 @@
 
 ## Outcome
 
-**PASS — workflow boundary validated.**
+**PASS — workflow boundary and canonical completion cycle validated.**
 
 Pilot Run 001 tested the reconstructed Phase 0–2 workflow with `ART-LIGHTHOUSE-001` without claiming a visual completion judgment. Current artwork images were not part of this run.
 
@@ -127,9 +127,11 @@ Two updated photographs were reviewed after the bounded correction pass.
 
 The large circular sky form remains visible, but it no longer defeats the lighthouse hierarchy strongly enough to justify reopening the drawing. Further changes there would be optional refinement with meaningful overworking risk.
 
-### Specialist Finish Cycle recommendation
+### Specialist Finish Cycle decision
 
-**PASS — FINISHED / PENCIL DOWN**, pending Joshua's explicit canonical status approval.
+**PASS — FINISHED / PENCIL DOWN.**
+
+Joshua explicitly approved the canonical completion update under `APR-PILOT-002`.
 
 ### Optional presentation work — cannot reopen completion
 
@@ -137,12 +139,24 @@ The large circular sky form remains visible, but it no longer defeats the lighth
 - Crop away the surrounding surface while retaining the full paper.
 - Minor removal of accidental surface dust or glare is allowed; do not redraw the artwork.
 
-### Proposed canonical completion update
+### Canonical completion update
 
 - Approval ID: `APR-PILOT-002`
-- Proposed status: `complete`
-- Proposed current goal: `Finish Cycle complete — pencil down`
-- Proposed next action: `Archive completion record, then send to Portfolio Hub for evaluation`
+- Approval status: `approved`
+- Proposal hash: `45745fd290a9d7bd5bd0c9873a5b7d96ca93a383ba0a44c6f6a65e81e19a911a`
+- Committed version: `6`
+- Status: `complete`
+- Current goal: `Finish Cycle complete — pencil down`
+- Next action: `Archive completion record, then send to Portfolio Hub for evaluation`
 - Primary Lab: unchanged (`perspective_environments`)
 - Title: unchanged (`The Last Point on the Map`)
 - Alias uncertainty: preserved (`Lighthouse Map`)
+
+### Final restart verification
+
+- Exact version-6 retrieval after process restart: passed
+- Version 4 preserved: yes
+- Version 5 preserved and bound to `APR-PILOT-001`: yes
+- Version 6 bound to `APR-PILOT-002`: yes
+- Final status: `complete`
+- Pencil-down boundary active: yes

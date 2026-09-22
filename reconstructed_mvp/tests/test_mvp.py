@@ -84,6 +84,33 @@ class MVPTests(unittest.TestCase):
         with self.assertRaises(LedgerAccessError):
             self.ledger.get_artwork_for_project("other", "p", self.art.artwork_id)
 
+    def test_status_only_retrieval_is_read_only_and_does_not_reopen_artwork(self):
+        before_memory = len(self.ledger.search_memory("p", ""))
+        before_version = self.ledger.get_artwork("p", self.art.artwork_id).version
+        result = self.coordinator.run(
+            self.art.artwork_id,
+            "Retrieve the current inventory status only. Do not critique, revise, route, reopen, or change the artwork.",
+            "p",
+        )
+        self.assertEqual(result.route.primary_lab, Lab.PERSPECTIVE_ENVIRONMENTS)
+        self.assertEqual(result.route.consultants, [])
+        self.assertEqual(result.findings, [])
+        self.assertEqual(result.recommendation, "")
+        self.assertFalse(result.approval_required)
+        self.assertEqual(len(self.ledger.search_memory("p", "")), before_memory)
+        self.assertEqual(self.ledger.get_artwork("p", self.art.artwork_id).version, before_version)
+
+    def test_critique_request_still_activates_specialist_and_records_proposal(self):
+        before_memory = len(self.ledger.search_memory("p", ""))
+        result = self.coordinator.run(
+            self.art.artwork_id,
+            "Critique the lighting contrast and spatial hierarchy.",
+            "p",
+        )
+        self.assertGreater(len(result.findings), 0)
+        self.assertNotEqual(result.recommendation, "")
+        self.assertEqual(len(self.ledger.search_memory("p", "")), before_memory + 1)
+
 
 if __name__ == "__main__":
     unittest.main()

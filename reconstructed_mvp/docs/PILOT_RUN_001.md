@@ -109,3 +109,40 @@ This is not authorization for broad reworking. The composition and concept are e
 ### Stop condition
 
 Stop when the lantern reads first, the tower visibly contacts its rock platform, and the diagonal transition reads as map becoming coastline/water instead of a hard divider. Do not add detail across the entire drawing. Return one updated photograph for the final completion review.
+
+## Final correction-pass review
+
+Two updated photographs were reviewed after the bounded correction pass.
+
+### Verified improvements
+
+- The lantern roof and balcony now provide stronger local contrast, allowing the light interior to read more clearly.
+- The tower/platform/rock junction is darker and more connected; the lighthouse no longer feels visually detached from its foundation.
+- The strengthened coastal values and water-side rock overlaps make the map-to-environment transition more deliberate.
+- The lighthouse remains the dominant destination while the compass and map field retain their narrative role.
+
+### Essential corrections remaining
+
+**NONE identified.**
+
+The large circular sky form remains visible, but it no longer defeats the lighthouse hierarchy strongly enough to justify reopening the drawing. Further changes there would be optional refinement with meaningful overworking risk.
+
+### Specialist Finish Cycle recommendation
+
+**PASS — FINISHED / PENCIL DOWN**, pending Joshua's explicit canonical status approval.
+
+### Optional presentation work — cannot reopen completion
+
+- Take one evenly lit, square photograph or scan for Archive/Portfolio evaluation.
+- Crop away the surrounding surface while retaining the full paper.
+- Minor removal of accidental surface dust or glare is allowed; do not redraw the artwork.
+
+### Proposed canonical completion update
+
+- Approval ID: `APR-PILOT-002`
+- Proposed status: `complete`
+- Proposed current goal: `Finish Cycle complete — pencil down`
+- Proposed next action: `Archive completion record, then send to Portfolio Hub for evaluation`
+- Primary Lab: unchanged (`perspective_environments`)
+- Title: unchanged (`The Last Point on the Map`)
+- Alias uncertainty: preserved (`Lighthouse Map`)

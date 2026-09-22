@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sketch-lab-network"
+version = "0.1.0"
+description = "Local-first reconstruction of the Sketch Lab Agent Network Phase 0-2 MVP"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+sketch-lab = "sketch_lab.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+

@@ -46,10 +46,47 @@ class Coordinator:
         protected = ("change title", "change primary", "mark complete", "archive", "continue")
         return any(term in lowered for term in protected)
 
+    def classify_intent(self, request: str) -> str:
+        """Classify only the intent needed to enforce the read-only boundary.
+
+        This is deliberately narrow. It is not a general natural-language
+        router and does not expand the Phase 0-2 architecture.
+        """
+        lowered = request.lower()
+        read_only_phrases = (
+            "status only",
+            "inventory status",
+            "retrieve the current",
+            "retrieve current",
+            "retrieve the exact",
+            "read-only",
+            "read only",
+        )
+        if any(phrase in lowered for phrase in read_only_phrases):
+            return "retrieve"
+        return "work"
+
     def run(self, artwork_id: str, request: str, project_id: str = "sketch-lab") -> RunResult:
         artwork = self.ledger.get_artwork(project_id, artwork_id)
-        route = self.route(artwork_id, request, project_id)
         run_id = "RUN-" + hashlib.sha256(f"{project_id}|{artwork_id}|{artwork.version}|{request}".encode()).hexdigest()[:12].upper()
+        if self.classify_intent(request) == "retrieve":
+            route = RouteDecision(
+                artwork.primary_lab,
+                [],
+                {artwork.primary_lab: "canonical_primary_lab"},
+            )
+            return RunResult(
+                run_id,
+                artwork_id,
+                artwork.version,
+                route,
+                [],
+                [],
+                "",
+                False,
+            )
+
+        route = self.route(artwork_id, request, project_id)
         findings = []
         for lab in [route.primary_lab, *route.consultants]:
             active = lab in ACTIVE_PILOT_LABS
@@ -75,4 +112,3 @@ class Coordinator:
     def _synthesize(findings: Iterable[dict]) -> str:
         accepted = [f["statement"] for f in findings if f["status"] == "completed"]
         return " ".join(accepted) if accepted else "No runnable specialist was activated; human routing is required."
-
